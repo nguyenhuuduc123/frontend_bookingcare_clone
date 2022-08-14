@@ -5,7 +5,7 @@ import * as actions from "../../store/actions";
 
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-import {userService} from '../../services';
+import {handleLogin} from '../../services';
 import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 
@@ -31,7 +31,7 @@ class Login extends Component {
         errorMessage : ''
     })
    try{
-  let data =   await userService(this.state.username,this.state.password)
+  let data =   await handleLogin(this.state.username,this.state.password)
   if(data && data.errorCode !== 0){
     this.setState({ 
         errorMessage : data.message
