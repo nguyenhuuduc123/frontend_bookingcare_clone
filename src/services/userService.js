@@ -7,5 +7,7 @@ const handleLogin = (email,password) => {
 const getAllUser = (inputId) => {
     return axios.get(`/api/get-all-users?id=${inputId}`)
 }
-
-export {handleLogin,getAllUser} ;
+const createNewUser = (data) => {
+    return axios.post('/api/create-new-user',data)
+}
+export {handleLogin,getAllUser,createNewUser} ;

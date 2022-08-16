@@ -2,15 +2,33 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import "./userManage.scss";
 import { connect } from "react-redux";
-import { getAllUser } from "../../services/index";
+import { getAllUser,createNewUser } from "../../services/index";
+import ModalUser from './ModalUser';
+
 class UserManage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = {  
       arrUsers: [],
+      isOpenModalUser : false,
     };
   }
   async componentDidMount() {
+   await this.getAllUserFromReact();
+  }
+  handleAddNewUser = () => {
+    this.setState({
+      isOpenModalUser : true,
+    })
+  }
+
+
+  toggleUserModal = () => {
+    this.setState({
+      isOpenModalUser : !this.state.isOpenModalUser,
+    })
+  } 
+  getAllUserFromReact = async () => {
     let response = await getAllUser("ALL");
     if (response && response.errCode === 0) {
       this.setState({
@@ -19,11 +37,38 @@ class UserManage extends Component {
     }
   }
 
+  createNewUser = async(data) => {
+    try{
+   let response =  await createNewUser(data);
+   if(response && response.message.errCode !== 0){
+    
+    alert(response.message.message);
+   }else {
+    await this.getAllUserFromReact();
+    this.setState({
+      isOpenModalUser : false
+    })
+   }
+   
+    }catch(e){
+      console.log(e)
+    }
+  }
+  
   render() {
     let arrUsers = this.state.arrUsers;
     return (
       <div className="users-container">
+        <ModalUser
+          isOpen  = {this.state.isOpenModalUser}
+          toggleFromParent = {this.toggleUserModal}
+          createNewUser  = {this.createNewUser}    
+        />  
         <div className="title text-center">manage user with me</div>
+        <div className="mx-1 button-st">
+         <button className="btn btn-primary px-3"
+         onClick = {()=> {this.handleAddNewUser()}}><i className ="fas fa-plus mx-2"></i>add new user</button>
+          </div>
         <div className="user-table mt-3 mx-3">
           <table id="customers">
             <thead>
