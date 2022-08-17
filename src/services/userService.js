@@ -10,4 +10,9 @@ const getAllUser = (inputId) => {
 const createNewUser = (data) => {
     return axios.post('/api/create-new-user',data)
 }
-export {handleLogin,getAllUser,createNewUser} ;
+const deleleUserService =  (userId) => {
+        return axios.delete('/api/delete-new-user',{
+            data : { id : userId}
+        })
+}
+export {handleLogin,getAllUser,createNewUser,deleleUserService} ;
