@@ -1,4 +1,25 @@
 {
+    "homeheader" : {
+        "speciality": "Medical specialty",
+        "searchdoctor" : "find a doctor by specialty",
+        "heath-facility" : "heath facility",
+        "select-room" : "choose hoptital clinic",
+        "doctor" : "doctor ",
+        "select-doctor" : "choose a good doctor",
+        "fee" : "checkup package",
+        "check-health" : "general health check ",
+        "support" : "support"
+    },
+    "banner" : {
+        "title1" : " nền tảng y tế",
+        "title2" : " chăm sóc sức khỏe toàn diện",
+        "child1" : "medical test",
+        "child2" : "specialist examination",
+        "child3" : "specialist examination",
+        "child4" : "specialist examination",
+        "child5" : "specialist examination",
+        "child6" : "specialist examination"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
