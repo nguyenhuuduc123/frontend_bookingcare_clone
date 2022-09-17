@@ -16,6 +16,12 @@
         background :  lightblue;
         border : 1px solid green;
     }
+    &.section-about {
+       background-color: lightblue;
+       border-top : 1px solid red;
+       border-bottom : 1px solid red;
+       box-sizing: border-box;
+    }
     &.section-outstanding-doctor{
         background : #f5f5f5;
     }
