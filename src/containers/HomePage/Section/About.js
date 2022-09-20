@@ -16,9 +16,9 @@ class About extends Component {
               height="250px"
               width="60%"
               title="[Vietsub + Kara MV] All about you( 全部都是 ) - Dragon Pig (feat. CNBALLER & CLOUD WANG)"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="content-right">

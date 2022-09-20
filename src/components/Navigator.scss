@@ -35,6 +35,12 @@
                 height: 35px;
                 line-height: 35px;
                 text-transform: none;
+                &.active {
+                    a{
+                        color : red !important;
+                    }
+                    background-color : yellowgreen;
+                }
                 .menu-link {
                     text-decoration: none;
                     color: $text-in-light;
@@ -64,14 +70,16 @@
                             display: block;
                         }
                         &.active a {
+                            color : red !important ;
                             font-weight: 500;
-                            color: $colormain;
+                           color: $colormain;
                         }
                     }
                 }
                 &.active span {
                     font-weight: 500;
                     color: $colormain;
+                    
                 }
                 &:hover {
                     background-color: darken($bg-menu-color, 3);

@@ -8,7 +8,8 @@
         "select-doctor" : "chọn bác sĩ",
         "fee" : "ghi khám",
         "check-health" : "khám sức khỏe tổng quát",
-        "support" : "hỗ trợ"
+        "support" : "hỗ trợ",
+        "welcome" : "xin chào, "
     },
     "banner" : {
         "title1" : " nền tảng y tế",
@@ -58,6 +59,19 @@
             "system-parameter": {
                 "header": "Tham số hệ thống"
             }
+        },
+        "admin" : {
+            "manage-user" : "Người dùng",
+            "manage-doctor" : "quản lý bác sĩ",
+            "manage-admin" : "quản lý admin",
+            "crud" : "CRUD user",
+            "crud-redux" : "CRUD redux",
+            "manage-clinic" : "quản lý phòng khám",
+            "clinic" : "phòng khám",
+            "specialty" : " chuyên khoa",
+            "manage-specialty" : "quản lý chuyên khoa",
+            "handbook" : "cảm nang",
+            "manage-handbook" : "quản lý cảm nang"
         }
     },
     "system": {

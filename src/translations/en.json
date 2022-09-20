@@ -8,7 +8,8 @@
         "select-doctor" : "choose a good doctor",
         "fee" : "checkup package",
         "check-health" : "general health check ",
-        "support" : "support"
+        "support" : "support",
+        "welcome" : "welcome. "
     },
     "banner" : {
         "title1" : " nền tảng y tế",
@@ -58,6 +59,19 @@
             "system-parameter": {
                 "header": "System-parameter"
             }
+        },
+        "admin" : {
+            "manage-user" : "users",
+            "manage-doctor" : "manage doctor",
+            "manage-admin" : "manage admin",
+            "crud" : "CRUD user",
+            "crud-redux" : "CRUD redux",
+            "manage-clinic" : "manage clinic",
+            "clinic" : "clinic",
+            "specialty" : " specialty",
+            "manage-specialty" : "manage specialty",
+            "handbook" : "handbook",
+            "manage-handbook" : "manage handbook"
         }
     },
     "system": {

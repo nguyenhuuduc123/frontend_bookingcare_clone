@@ -10,7 +10,7 @@ class Header extends Component {
      }
     render() {  
         let language = this.props.language;
-        
+      
         return (
             <React.Fragment>
            <div className = "home-header-container">
@@ -110,6 +110,7 @@ const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language : state.app.language,
+       
 
     };
 };
